@@ -112,7 +112,7 @@
             margin-bottom: 30px;
         }
         .btn {
-            background-color: #1e3a8a; /* Changed to blue */
+            background-color: #1e3a8a;
             color: #ffffff;
             padding: 12px 30px;
             text-decoration: none;
@@ -121,7 +121,7 @@
             transition: background 0.3s ease, transform 0.2s ease;
         }
         .btn:hover {
-            background-color: #1e40af; /* Darker blue on hover */
+            background-color: #1e40af;
             transform: scale(1.05);
         }
 
@@ -246,6 +246,12 @@
         }
         footer p {
             font-size: 14px;
+            margin-bottom: 10px; /* Space between text and image */
+        }
+        footer img {
+            max-width: 150px; /* Adjust size as needed */
+            height: auto;
+            margin: 10px 0; /* Vertical margin for spacing */
         }
 
         /* Responsive Design */
@@ -280,6 +286,9 @@
             }
             .service-grid {
                 grid-template-columns: 1fr;
+            }
+            footer img {
+                max-width: 120px; /* Smaller image on mobile */
             }
         }
     </style>
@@ -361,6 +370,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2025 iPhone Repair Bulandshahr. All rights reserved. | Trusted iPhone Repair Shop in Bulandshahr</p>
+            <img src="https://via.placeholder.com/150?text=Footer+Image" alt="Footer Logo">
         </div>
     </footer>
 
