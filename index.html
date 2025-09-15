@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional iPhone repair services in Bulandshahr. Fast, reliable, and affordable repairs for screens, batteries, and more.">
-    <meta name="keywords" content="iPhone repair Bulandshahr, Apple repair service, mobile repair shop Bulandshahr, iPhone screen replacement">
-    <title>iPhone Repair Bulandshahr - Quick & Reliable Service</title>
+    <meta name="description" content="Professional iPhone repair services in Bulandshahr. Expert screen replacement, battery repair, and more with fast, reliable service.">
+    <meta name="keywords" content="iPhone repair Bulandshahr, Apple repair, mobile repair shop, iPhone screen repair, battery replacement Bulandshahr">
+    <meta name="author" content="iPhone Repair Bulandshahr">
+    <meta name="robots" content="index, follow">
+    <title>iPhone Repair Bulandshahr - Expert & Affordable Services</title>
     <style>
         /* Reset and Base Styles */
         * {
@@ -14,10 +16,10 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
+            color: #1a1a1a;
+            background-color: #f5f7fa;
         }
         .container {
             max-width: 1200px;
@@ -27,14 +29,14 @@
 
         /* Header */
         header {
-            background-color: #007bff;
-            color: white;
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+            color: #ffffff;
             padding: 15px 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         nav {
             display: flex;
@@ -42,127 +44,158 @@
             align-items: center;
         }
         .logo {
-            font-size: 24px;
-            font-weight: bold;
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 1px;
         }
         .nav-links {
             list-style: none;
             display: flex;
         }
         .nav-links li {
-            margin-left: 20px;
+            margin-left: 25px;
         }
         .nav-links a {
-            color: white;
+            color: #ffffff;
             text-decoration: none;
             font-size: 16px;
-            transition: color 0.3s;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
         .nav-links a:hover {
-            color: #ffd700;
+            color: #facc15;
         }
         .menu-toggle {
             display: none;
             cursor: pointer;
             font-size: 24px;
+            color: #ffffff;
         }
 
         /* Hero Section */
         #hero {
-            background: url('https://via.placeholder.com/1200x600?text=iPhone+Repair') no-repeat center/cover;
+            background: url('https://images.unsplash.com/photo-1611143669185-7e7e89e6864e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center/cover;
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: white;
-            margin-top: 70px; /* Adjust for fixed header */
+            color: #ffffff;
+            margin-top: 80px;
+            position: relative;
+        }
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1;
         }
         .hero-content {
-            background: rgba(0,0,0,0.5);
-            padding: 40px;
-            border-radius: 10px;
+            position: relative;
+            z-index: 2;
+            background: transparent;
+            padding: 50px;
+            border-radius: 12px;
+            max-width: 700px;
         }
         .hero-content h1 {
             font-size: 48px;
             margin-bottom: 20px;
+            font-weight: 700;
         }
         .hero-content p {
-            font-size: 24px;
+            font-size: 20px;
             margin-bottom: 30px;
         }
         .btn {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
+            background-color: #1e3a8a; /* Changed to blue */
+            color: #ffffff;
+            padding: 12px 30px;
             text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.2s ease;
         }
         .btn:hover {
-            background-color: #0056b3;
+            background-color: #1e40af; /* Darker blue on hover */
+            transform: scale(1.05);
         }
 
         /* Services Section */
         #services {
-            padding: 60px 0;
-            background-color: white;
+            padding: 80px 0;
+            background-color: #ffffff;
         }
         #services h2 {
             text-align: center;
-            margin-bottom: 40px;
             font-size: 36px;
+            margin-bottom: 50px;
+            color: #1e3a8a;
         }
         .service-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
         .service-item {
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
+            background: #f5f7fa;
+            padding: 30px;
+            border-radius: 12px;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .service-item:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
         }
         .service-item img {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             margin-bottom: 20px;
         }
         .service-item h3 {
             font-size: 24px;
-            margin-bottom: 10px;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+        }
+        .service-item p {
+            font-size: 16px;
+            color: #4b5563;
         }
 
         /* About Section */
         #about {
-            padding: 60px 0;
-            background-color: #e9ecef;
+            padding: 80px 0;
+            background: linear-gradient(180deg, #e5e7eb, #f5f7fa);
             text-align: center;
         }
         #about h2 {
             font-size: 36px;
-            margin-bottom: 20px;
+            color: #1e3a8a;
+            margin-bottom: 30px;
         }
         #about p {
             max-width: 800px;
-            margin: 0 auto 30px;
+            margin: 0 auto 20px;
+            font-size: 18px;
+            color: #4b5563;
         }
 
         /* Contact Section */
         #contact {
-            padding: 60px 0;
-            background-color: white;
+            padding: 80px 0;
+            background-color: #ffffff;
         }
         #contact h2 {
             text-align: center;
             font-size: 36px;
-            margin-bottom: 40px;
+            color: #1e3a8a;
+            margin-bottom: 50px;
         }
         form {
             max-width: 600px;
@@ -170,31 +203,42 @@
         }
         form input, form textarea {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        form input:focus, form textarea:focus {
+            outline: none;
+            border-color: #1e3a8a;
         }
         form button {
             width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
+            padding: 12px;
+            background-color: #1e3a8a;
+            color: #ffffff;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: background 0.3s ease;
         }
         form button:hover {
-            background-color: #0056b3;
+            background-color: #1e40af;
         }
 
         /* Footer */
         footer {
-            background-color: #333;
-            color: white;
+            background: #1e3a8a;
+            color: #ffffff;
             text-align: center;
             padding: 20px 0;
+        }
+        footer p {
+            font-size: 14px;
         }
 
         /* Responsive Design */
@@ -203,17 +247,17 @@
                 display: none;
                 flex-direction: column;
                 position: absolute;
-                top: 70px;
+                top: 80px;
                 left: 0;
                 width: 100%;
-                background-color: #007bff;
+                background: #1e3a8a;
+                padding: 20px 0;
             }
             .nav-links.active {
                 display: flex;
             }
             .nav-links li {
-                margin: 10px 0;
-                text-align: center;
+                margin: 15px 0;
             }
             .menu-toggle {
                 display: block;
@@ -226,6 +270,9 @@
             }
             .hero-content p {
                 font-size: 18px;
+            }
+            .service-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -250,34 +297,34 @@
     <section id="hero">
         <div class="hero-content">
             <h1>Expert iPhone Repair in Bulandshahr</h1>
-            <p>Fast, reliable, and affordable services for all your iPhone needs.</p>
-            <a href="#contact" class="btn">Book a Repair</a>
+            <p>Fast, reliable, and affordable repairs for your iPhone. From screen replacements to battery fixes, we’ve got you covered!</p>
+            <a href="#contact" class="btn">Get a Free Quote</a>
         </div>
     </section>
 
     <section id="services">
         <div class="container">
-            <h2>Our Services</h2>
+            <h2>Our Expert iPhone Repair Services</h2>
             <div class="service-grid">
                 <div class="service-item">
-                    <img src="https://via.placeholder.com/100?text=Screen" alt="Screen Replacement">
+                    <img src="https://via.placeholder.com/80?text=Screen" alt="iPhone Screen Replacement">
                     <h3>Screen Replacement</h3>
-                    <p>Cracked screen? We fix it with genuine parts.</p>
+                    <p>Fix your cracked or shattered iPhone screen with high-quality, genuine parts in just hours.</p>
                 </div>
                 <div class="service-item">
-                    <img src="https://via.placeholder.com/100?text=Battery" alt="Battery Replacement">
+                    <img src="https://via.placeholder.com/80?text=Battery" alt="iPhone Battery Replacement">
                     <h3>Battery Replacement</h3>
-                    <p>Extend your iPhone's life with a new battery.</p>
+                    <p>Restore your iPhone’s battery life with our professional replacement service.</p>
                 </div>
                 <div class="service-item">
-                    <img src="https://via.placeholder.com/100?text=Water" alt="Water Damage Repair">
+                    <img src="https://via.placeholder.com/80?text=Water" alt="Water Damage Repair">
                     <h3>Water Damage Repair</h3>
-                    <p>Revive your water-damaged iPhone quickly.</p>
+                    <p>Quickly revive your water-damaged iPhone with our expert diagnostics and repair.</p>
                 </div>
                 <div class="service-item">
-                    <img src="https://via.placeholder.com/100?text=Software" alt="Software Issues">
-                    <h3>Software Issues</h3>
-                    <p>Fix bugs, updates, and performance problems.</p>
+                    <img src="https://via.placeholder.com/80?text=Software" alt="Software Repair">
+                    <h3>Software Fixes</h3>
+                    <p>Resolve software issues, crashes, or slow performance with our expert solutions.</p>
                 </div>
             </div>
         </div>
@@ -285,33 +332,33 @@
 
     <section id="about">
         <div class="container">
-            <h2>About Us</h2>
-            <p>We are a trusted iPhone repair shop in Bulandshahr with years of experience. Our certified technicians use high-quality parts to ensure your device works like new.</p>
-            <p>Located in the heart of Bulandshahr, we offer same-day repairs for most issues. Customer satisfaction is our top priority.</p>
+            <h2>About iPhone Repair Bulandshahr</h2>
+            <p>We are the leading iPhone repair experts in Bulandshahr, offering professional and affordable repair services. Our certified technicians use only high-quality parts to ensure your iPhone works like new.</p>
+            <p>Located centrally in Bulandshahr, we provide same-day repairs for most issues, with a focus on customer satisfaction and quality service. Trust us to get your device back in top shape!</p>
         </div>
     </section>
 
     <section id="contact">
         <div class="container">
-            <h2>Contact Us</h2>
+            <h2>Contact Us for iPhone Repairs</h2>
             <form id="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <input type="tel" placeholder="Your Phone" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit">Send Message</button>
+                <input type="text" placeholder="Your Name" required aria-label="Your Name">
+                <input type="email" placeholder="Your Email" required aria-label="Your Email">
+                <input type="tel" placeholder="Your Phone" required aria-label="Your Phone">
+                <textarea placeholder="Describe Your iPhone Issue" rows="5" required aria-label="Your Message"></textarea>
+                <button type="submit">Submit Inquiry</button>
             </form>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 iPhone Repair Bulandshahr. All rights reserved.</p>
+            <p>&copy; 2025 iPhone Repair Bulandshahr. All rights reserved. | Trusted iPhone Repair Shop in Bulandshahr</p>
         </div>
     </footer>
 
     <script>
-        // Menu Toggle for Mobile
+        // Mobile Menu Toggle
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
 
@@ -319,11 +366,11 @@
             navLinks.classList.toggle('active');
         });
 
-        // Form Submission (Simulated)
+        // Form Submission Handler
         const form = document.getElementById('contact-form');
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
+            alert('Thank you for your inquiry! Our team will contact you soon.');
             form.reset();
         });
     </script>
