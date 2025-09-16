@@ -37,6 +37,8 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            border: 2px solid #1e3a8a;
+            border-image: linear-gradient(to right, #1e3a8a, #3b82f6) 1;
         }
         nav {
             display: flex;
@@ -80,7 +82,6 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: #3B82F6;
             margin-top: 80px;
             position: relative;
         }
@@ -97,19 +98,22 @@
         .hero-content {
             position: relative;
             z-index: 2;
-            background: transparent;
             padding: 50px;
             border-radius: 12px;
             max-width: 700px;
+            border: 4px solid #1e3a8a;
+            border-image: linear-gradient(to right, #1e3a8a, #ffffff) 1;
         }
         .hero-content h1 {
             font-size: 48px;
             margin-bottom: 20px;
             font-weight: 700;
+            color: #ffffff;
         }
         .hero-content p {
             font-size: 20px;
             margin-bottom: 30px;
+            color: #d1d5db;
         }
         .btn {
             background-color: #1e3a8a;
@@ -129,6 +133,8 @@
         #services {
             padding: 80px 0;
             background-color: #ffffff;
+            border: 2px solid #1e3a8a;
+            border-image: linear-gradient(to bottom, #1e3a8a, #3b82f6) 1;
         }
         #services h2 {
             text-align: center;
@@ -148,6 +154,7 @@
             text-align: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #1e3a8a;
         }
         .service-item:hover {
             transform: translateY(-8px);
@@ -158,7 +165,6 @@
             height: 80px;
             margin-bottom: 20px;
         }
-        /* Sirf Screen Replacement wali image par border */
         .service-item img[alt="iPhone Battery Replacement"]:first-of-type {
             border: 3px solid #1e3a8a;
             border-radius: 10px;
@@ -180,6 +186,8 @@
             padding: 80px 0;
             background: linear-gradient(180deg, #e5e7eb, #f5f7fa);
             text-align: center;
+            border: 2px solid #1e3a8a;
+            border-image: linear-gradient(to left, #1e3a8a, #3b82f6) 1;
         }
         #about h2 {
             font-size: 36px;
@@ -197,6 +205,8 @@
         #contact {
             padding: 80px 0;
             background-color: #ffffff;
+            border: 2px solid #1e3a8a;
+            border-image: linear-gradient(to top, #1e3a8a, #3b82f6) 1;
         }
         #contact h2 {
             text-align: center;
@@ -243,15 +253,17 @@
             color: #ffffff;
             text-align: center;
             padding: 20px 0;
+            border: 2px solid #1e3a8a;
+            border-image: linear-gradient(to right, #3b82f6, #1e3a8a) 1;
         }
         footer p {
             font-size: 14px;
-            margin-bottom: 10px; /* Space between text and image */
+            margin-bottom: 10px;
         }
         footer img {
-            max-width: 150px; /* Adjust size as needed */
+            max-width: 150px;
             height: auto;
-            margin: 10px 0; /* Vertical margin for spacing */
+            margin: 10px 0;
         }
 
         /* Responsive Design */
@@ -288,7 +300,13 @@
                 grid-template-columns: 1fr;
             }
             footer img {
-                max-width: 120px; /* Smaller image on mobile */
+                max-width: 120px;
+            }
+            header, #services, #about, #contact, footer {
+                border-width: 1px;
+            }
+            .hero-content {
+                border-width: 2px;
             }
         }
     </style>
@@ -323,7 +341,7 @@
             <h2>Our Expert iPhone Repair Services</h2>
             <div class="service-grid">
                 <div class="service-item">
-                    <img src="https://iphone-repair-bulandshahr.pages.dev/download.jpg" alt="iPhone Battery Replacement">
+                    <img src="https://iphone-repair-bulandshahr.pages.dev/download.jpg" alt="iPhone Screen Replacement">
                     <h3>Screen Replacement</h3>
                     <p>Fix your cracked or shattered iPhone screen with high-quality, genuine parts in just hours.</p>
                 </div>
