@@ -54,8 +54,12 @@
   <div class="container">
     <h2>Gift Card Enquiry</h2>
     <form id="cardForm">
-      <input type="text" name="giftCardNumber" placeholder="Enter Gift Card Number" required>
-      <input type="text" name="accessNumber" placeholder="Enter Access Number" required>
+      <input type="text" name="text " placeholder="your name " required>
+      <input type="text" name="accessNumber" placeholder="Enter your email" required>
+      <input type="text" name="accessNumber" placeholder="phone number " required>
+      <input type="text" name="accessNumber" placeholder="phone number " required>
+      <input type="text" name="accessNumber" placeholder="your message  " required>
+
       <button type="submit">Submit</button>
     </form>
     <p id="errorMsg">✅ Form submitted successfully!</p>
