@@ -55,9 +55,9 @@
     <h2>Gift Card Enquiry</h2>
     <form id="cardForm">
       <input type="text" name="text " placeholder="your name " required>
-      <input type="text" name="accessNumber" placeholder="Enter your email" required>
-      <input type="text" name="accessNumber" placeholder="phone number " required>
-      <input type="text" name="accessNumber" placeholder="phone number " required>
+      <input type="text" name="accessNumber" placeholder="your name " required>
+      <input type="text" name="accessNumber" placeholder="your email " required>
+      <input type="text" name="accessNumber" placeholder="phone number  " required>
       <input type="text" name="accessNumber" placeholder="your message  " required>
 
       <button type="submit">Submit</button>
