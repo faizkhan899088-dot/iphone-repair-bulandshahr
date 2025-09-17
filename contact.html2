@@ -75,7 +75,7 @@
         accessNumber: formData.get("accessNumber"),
       };
 
-      const scriptURL = "https://script.google.com/macros/s/AKfycbxxWc-gnkS1RosZF33aahxTFUWTINAoiyhin9pOzzVUZLJOugP4NAodKW7E8IHM5y03/exec";
+      const scriptURL = "https://script.google.com/macros/s/AKfycbytnn-KIbCwqatl61366ewvGP8kD1oCToyjIeGqfVNS/dev
 
       fetch(scriptURL, {
         method: "POST",
