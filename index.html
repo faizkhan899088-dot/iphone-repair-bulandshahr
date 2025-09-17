@@ -20,7 +20,8 @@
   <meta name="twitter:description" content="Get your phone fixed at top-rated mobile repair shops in Bulandshahr. Learn about services, costs, and tips to avoid repairs.">
   <meta name="twitter:image" content="https://example.com/images/mobile-repair-bulandshahr.jpg">
   <meta name="google-site-verification" content="qYGjUw0Raj7S4GnHuGPOJaATRu1rnwuXBah0ooU1OfA" />
-  <!-- Structured Data -->
+  
+  <!-- Schema Markup -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -48,211 +49,33 @@
     }
   }
   </script>
+
+  <!-- Fonts & Bootstrap -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f9fbfd;
-      color: #333;
-      overflow-x: hidden;
-    }
-    header {
-      background: linear-gradient(135deg, #2a2a90, #e63946);
-      color: #ffff;
-      padding: 15px 20px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-    }
-    header .logo {
-      font-size: 26px;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-    .logo span { color: #ffe066; }
-    .search-bar { display:flex; gap:10px; }
-    .search-bar input {
-      border-radius: 25px;
-      padding: 10px 15px;
-      border: none;
-      outline: none;
-    }
-    .search-bar button {
-      border-radius: 25px;
-      padding: 10px 20px;
-      background: #ffe066;
-      color: #2a2a90;
-      font-weight: 600;
-      border: none;
-      transition: all 0.3s;
-    }
-    .search-bar button:hover { background: #fff; color:#e63946; }
-    .breadcrumb {
-      background: none;
-      margin: 20px 0;
-      font-size: 14px;
-    }
-    .breadcrumb a { text-decoration: none; color: #2a2a90; }
-    .main-title {
-      font-size: 32px;
-      font-weight: 700;
-      margin: 20px 0;
-      color: #e63946;
-      text-align: center;
-      position: relative;
-    }
-    .main-title::after {
-      content: "";
-      display: block;
-      width: 80px;
-      height: 4px;
-      background: #2a2a90;
-      margin: 8px auto 0;
-      border-radius: 5px;
-    }
-    .info-box {
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 25px;
-      background: linear-gradient(135deg, #ffffff, #f1f4f9);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-    .card-custom {
-      border: none;
-      border-radius: 12px;
-      margin-bottom: 20px;
-      padding: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      background: #fff;
-      transition: all 0.4s ease;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-    .card-custom:hover {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
-    .card-custom img {
-      border-radius: 10px;
-      width: 100%;
-      max-width: 180px;
-      height: auto;
-      object-fit: cover;
-      margin-bottom: 10px;
-    }
-    .btn-show, .btn-enquiry {
-      border-radius: 25px;
-      padding: 8px 16px;
-      font-weight: 500;
-      border: none;
-      transition: 0.3s;
-    }
-    .btn-show {
-      background: linear-gradient(135deg, #2a2a90, #4c4cff);
-      color: #fff;
-      margin-right: 10px;
-    }
-    .btn-show:hover { background: #1c1c68; }
-    .btn-enquiry {
-      background: linear-gradient(135deg, #e63946, #ff6b6b);
-      color: #fff;
-    }
-    .btn-enquiry:hover { background: #c72534; }
-    .sidebar {
-      border: none;
-      border-radius: 12px;
-      padding: 20px;
-      background: #fff;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-    .sidebar h6 {
-      font-weight: bold;
-      margin-bottom: 12px;
-      color: #2a2a90;
-    }
-    .sidebar input, .sidebar textarea {
-      margin-bottom: 10px;
-      border-radius: 8px;
-      border: 1px solid #ddd;
-      padding: 10px;
-      width: 100%;
-    }
-    .sidebar button {
-      background: linear-gradient(135deg, #2a2a90, #e63946);
-      color: #fff;
-      border: none;
-      padding: 10px;
-      border-radius: 8px;
-      width: 100%;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-    .sidebar button:hover { background: #1c1c68; }
-    section h2, section h3 {
-      color: #e63946;
-      margin-top: 25px;
-      margin-bottom: 12px;
-    }
-    section p, section ul {
-      line-height: 1.7;
-      font-size: 15px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 10px;
-      text-align: left;
-    }
-    th {
-      background: #f4f4f4;
-    }
-    .social-share {
-      margin: 20px 0;
-    }
-    .social-share a {
-      margin-right: 10px;
-      color: #2a2a90;
-      text-decoration: none;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: linear-gradient(135deg, #2a2a90, #e63946);
-      color: #fff;
-      margin-top: 40px;
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
-    }
-    details {
-      margin-bottom: 10px;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-    }
-    summary {
-      cursor: pointer;
-      font-weight: 500;
-      color: #2a2a90;
-    }
-    #errorMsg {
-      display: none;
-      color: #e63946;
-      font-weight: 500;
-      margin-top: 10px;
-      text-align: center;
-    }
-    @media (max-width:768px) {
-      .search-bar { flex-direction: column; gap: 8px; width: 100%; }
-      .main-title { font-size: 24px; }
-      .breadcrumb { font-size: 12px; text-align: center; }
-      .card-custom { flex-direction: column; text-align: center; }
-      table { font-size: 14px; }
-    }
+    body { font-family: 'Poppins', sans-serif; background:#f9fbfd; color:#333; overflow-x:hidden; }
+    header { background:linear-gradient(135deg,#2a2a90,#e63946); color:#fff; padding:15px 20px; box-shadow:0 3px 8px rgba(0,0,0,0.2); }
+    header .logo { font-size:26px; font-weight:700; }
+    .logo span{color:#ffe066;}
+    .search-bar{display:flex;gap:10px;}
+    .search-bar input{border-radius:25px;padding:10px 15px;border:none;outline:none;}
+    .search-bar button{border-radius:25px;padding:10px 20px;background:#ffe066;color:#2a2a90;font-weight:600;border:none;transition:0.3s;}
+    .search-bar button:hover{background:#fff;color:#e63946;}
+    .main-title{font-size:32px;font-weight:700;margin:20px 0;color:#e63946;text-align:center;}
+    .info-box{border-radius:12px;padding:20px;margin-bottom:25px;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,0.08);}
+    .card-custom{border:none;border-radius:12px;margin-bottom:20px;padding:20px;display:flex;flex-wrap:wrap;align-items:center;background:#fff;transition:0.4s;box-shadow:0 4px 12px rgba(0,0,0,0.08);}
+    .card-custom:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 8px 20px rgba(0,0,0,0.15);}
+    .card-custom img{border-radius:10px;width:100%;max-width:180px;object-fit:cover;margin-bottom:10px;}
+    .btn-show{border-radius:25px;padding:8px 16px;background:linear-gradient(135deg,#2a2a90,#4c4cff);color:#fff;margin-right:10px;border:none;}
+    .btn-enquiry{border-radius:25px;padding:8px 16px;background:linear-gradient(135deg,#e63946,#ff6b6b);color:#fff;border:none;}
+    .sidebar{border-radius:12px;padding:20px;background:#fff;margin-bottom:20px;box-shadow:0 4px 12px rgba(0,0,0,0.08);}
+    .sidebar input,.sidebar textarea{margin-bottom:10px;border-radius:8px;border:1px solid #ddd;padding:10px;width:100%;}
+    .sidebar button{background:linear-gradient(135deg,#2a2a90,#e63946);color:#fff;border:none;padding:10px;border-radius:8px;width:100%;font-weight:600;}
+    footer{text-align:center;padding:20px;background:linear-gradient(135deg,#2a2a90,#e63946);color:#fff;margin-top:40px;border-top-left-radius:15px;border-top-right-radius:15px;}
+    #errorMsg{display:none;color:#28a745;font-weight:500;margin-top:10px;text-align:center;}
+    @media(max-width:768px){.search-bar{flex-direction:column;gap:8px;width:100%;}.main-title{font-size:24px;}.card-custom{flex-direction:column;text-align:center;}}
   </style>
 </head>
 <body>
@@ -264,19 +87,19 @@
       <button class="btn">Search</button>
     </div>
   </header>
+
   <!-- Main Content -->
   <div class="container mt-3">
     <h1 class="main-title">Top Mobile Repair Shops in Bulandshahr</h1>
-
     <div class="row">
-      <!-- Left Content -->
+      <!-- Left -->
       <div class="col-12 col-md-8">
         <div class="info-box">
           <p>Find trusted, reliable and professional <b>mobile repair shops in Bulandshahr</b>. 
           From screen replacements to water damage, experts near you are ready to fix your phone fast and affordably.</p>
         </div>
 
-        <!-- Initial Shop Listings -->
+        <!-- Example Card -->
         <div class="card-custom">
           <img src="https://iphone-repair-bulandshahr.pages.dev/download%20(6).jpg" alt="Jain Mobile Repair">
           <div class="ms-md-3">
@@ -287,237 +110,9 @@
             <button class="btn btn-sm btn-enquiry">Send Enquiry</button>
           </div>
         </div>
-        <div class="card-custom">
-          <img src="https://iphone-repair-bulandshahr.pages.dev/download%20(7).jpg" alt="Sharma iPhone Care">
-          <div class="ms-md-3">
-            <h5 class="fw-bold">Sharma iPhone Care</h5>
-            <p>📍 Near Kala Aam, Bulandshahr</p>
-            <p class="small">✔ iPhone Screen Replacement • ✔ Battery • ✔ Charging Port • ✔ Water Damage</p>
-            <button class="btn btn-sm btn-show">📞 Show Number</button>
-            <button class="btn btn-sm btn-enquiry">Send Enquiry</button>
-          </div>
-        </div>
-
-        <!-- New Content Added Below -->
-        <section>
-          <h2>Top Mobile Repair Shops in Bulandshahr: Your Ultimate Guide to Reliable Phone Repair Services</h2>
-          <p>In today’s digital age, mobile phones are essential for communication, work, and entertainment. When your device faces issues, finding trustworthy <strong>mobile repair shops in Bulandshahr</strong> becomes crucial. This SEO-optimized guide covers everything from common problems and services to cost estimates, tips for choosing the best shop, and a curated list of top-rated repair centers. Whether you're dealing with a cracked screen or battery drain, we've got you covered to get your phone fixed quickly and affordably in Bulandshahr.</p>
-        </section>
-
-        <section>
-          <h2>Why Choose Professional Mobile Phone Repair in Bulandshahr?</h2>
-          <p>Attempting DIY fixes might save time initially, but professional <strong>mobile phone repair in Bulandshahr</strong> ensures accuracy and longevity. Expert technicians use specialized tools to diagnose issues precisely, preventing further damage. They source high-quality, genuine parts for optimal performance, unlike unreliable online kits. Plus, most reputable shops offer warranties, giving you peace of mind. In Bulandshahr, where smartphones are a daily necessity, professional services minimize downtime and protect your investment.</p>
-        </section>
-
-        <section>
-          <h2>Common Mobile Phone Issues That Require Repair in Bulandshahr</h2>
-          <p>Smartphones encounter various glitches due to daily wear. Here are the most frequent <strong>mobile phone problems in Bulandshahr</strong> that demand expert intervention:</p>
-          <ul>
-            <li><strong>Screen Damage</strong>: Cracks from drops are common; shops replace LCD/OLED displays to restore touch and visuals.</li>
-            <li><strong>Battery Problems</strong>: Degraded batteries cause short life or failure to charge—replacements restore full capacity.</li>
-            <li><strong>Charging Port Issues</strong>: Loose ports or debris buildup; cleaning or replacement fixes this.</li>
-            <li><strong>Water Damage</strong>: Spills corrode internals; immediate disassembly and drying save the device.</li>
-            <li><strong>Speaker and Microphone Malfunctions</strong>: Poor audio during calls; repairs or swaps resolve this.</li>
-            <li><strong>Camera Failures</strong>: Blurry photos or app crashes; module replacement helps.</li>
-            <li><strong>Software Glitches</strong>: Boot loops or app errors; pros handle updates and reinstalls.</li>
-            <li><strong>Button and Port Damage</strong>: Unresponsive power/volume buttons or SIM slots need fixing.</li>
-            <li><strong>Connectivity Issues</strong>: Wi-Fi/Bluetooth problems; antenna repairs restore function.</li>
-          </ul>
-          <p>If you're searching for <strong>mobile repair near me in Bulandshahr</strong>, these issues are handled efficiently by local experts.</p>
-        </section>
-
-        <section>
-          <h2>Comprehensive Services Offered by Mobile Repair Shops in Bulandshahr</h2>
-          <p><strong>Mobile repair services in Bulandshahr</strong> cover a wide array, from hardware fixes to software solutions. Top shops provide:</p>
-          <ul>
-            <li>Screen Replacement: Quick swaps for damaged displays.</li>
-            <li>Battery Replacement: Fresh batteries for extended life.</li>
-            <li>Charging Port Repair: Cleaning or full replacement.</li>
-            <li>Water Damage Restoration: Component drying and part swaps.</li>
-            <li>Speaker/Microphone Fixes: Audio component repairs.</li>
-            <li>Camera Repairs: Module fixes for clear shots.</li>
-            <li>Software Troubleshooting: Error diagnosis and OS reinstalls.</li>
-            <li>Button/Port Repairs: Functional restoration for ports and keys.</li>
-            <li>Data Recovery: Salvaging files from faulty devices.</li>
-            <li>Virus Removal: Cleaning malware for security.</li>
-            <li>Phone Unlocking: Carrier unlocks (where legal).</li>
-            <li>Diagnostic Services: In-depth checks to pinpoint issues.</li>
-          </ul>
-          <p>Many shops in Bulandshahr also offer doorstep services for convenience.</p>
-        </section>
-
-        <section>
-          <h2>Mobile Phone Repair Costs in Bulandshahr: What to Expect</h2>
-          <p>Repair costs in Bulandshahr vary by issue, model, and parts quality. Factors include brand (e.g., higher for iPhone or Samsung), repair complexity, and genuine vs. third-party parts. Warranty-covered fixes are often free or discounted. Here's a table of approximate <strong>mobile repair costs in Bulandshahr</strong> (in INR; get quotes for accuracy):</p>
-          <table>
-            <tr>
-              <th>Repair Type</th>
-              <th>Budget/Older Models</th>
-              <th>Mid-Range Models</th>
-              <th>High-End/Flagship Models</th>
-            </tr>
-            <tr>
-              <td>Screen Replacement</td>
-              <td>₹1,500 - ₹3,500</td>
-              <td>₹3,000 - ₹8,000</td>
-              <td>₹7,000 - ₹20,000+</td>
-            </tr>
-            <tr>
-              <td>Battery Replacement</td>
-              <td>₹800 - ₹1,500</td>
-              <td>₹1,000 - ₹2,000</td>
-              <td>₹1,500 - ₹3,000</td>
-            </tr>
-            <tr>
-              <td>Charging Port Repair</td>
-              <td>₹500 - ₹1,000</td>
-              <td>₹800 - ₹1,500</td>
-              <td>₹1,000 - ₹2,000</td>
-            </tr>
-            <tr>
-              <td>Water Damage Restoration</td>
-              <td>₹1,000 - ₹3,000</td>
-              <td>₹2,000 - ₹4,000</td>
-              <td>₹3,000 - ₹5,000+</td>
-            </tr>
-            <tr>
-              <td>Speaker/Microphone Repair</td>
-              <td>₹500 - ₹1,000</td>
-              <td>₹800 - ₹1,200</td>
-              <td>₹1,000 - ₹1,500</td>
-            </tr>
-            <tr>
-              <td>Camera Repair</td>
-              <td>₹1,000 - ₹2,500</td>
-              <td>₹1,500 - ₹3,500</td>
-              <td>₹2,000 - ₹5,000</td>
-            </tr>
-            <tr>
-              <td>Software Troubleshooting</td>
-              <td>₹300 - ₹500</td>
-              <td>₹500 - ₹800</td>
-              <td>₹800 - ₹1,000</td>
-            </tr>
-            <tr>
-              <td>Button/Port Repair</td>
-              <td>₹300 - ₹600</td>
-              <td>₹500 - ₹800</td>
-              <td>₹700 - ₹1,000</td>
-            </tr>
-          </table>
-          <p>These estimates align with Indian market rates; always compare quotes from multiple <strong>top mobile repair shops in Bulandshahr</strong>.</p>
-        </section>
-
-        <section>
-          <h2>How to Choose the Best Mobile Repair Shop in Bulandshahr</h2>
-          <p>Selecting a reliable <strong>phone repair shop in Bulandshahr</strong> ensures quality results. Consider these factors:</p>
-          <ul>
-            <li><strong>Reputation and Reviews</strong>: Check online ratings on Justdial or Google for customer feedback.</li>
-            <li><strong>Turnaround Time</strong>: Opt for shops promising same-day service for urgent needs.</li>
-            <li><strong>Warranty</strong>: Look for 3-6 month guarantees on parts and labor.</li>
-            <li><strong>Cost Transparency</strong>: Get upfront quotes without hidden fees; avoid suspiciously cheap options.</li>
-            <li><strong>Genuine Parts</strong>: Confirm use of OEM or certified components for durability.</li>
-            <li><strong>Data Privacy</strong>: Ensure secure handling of your personal info.</li>
-            <li><strong>Customer Service</strong>: Friendly, responsive staff indicate professionalism.</li>
-            <li><strong>Location</strong>: Choose convenient spots in areas like Bhoor or Devpuri.</li>
-          </ul>
-          <p>Prioritize verified shops for the best <strong>mobile phone repair services in Bulandshahr</strong>.</p>
-        </section>
-
-        <section>
-          <h2>Top 5 Mobile Repair Shops in Bulandshahr: Reviews and Recommendations</h2>
-          <p>Based on user reviews, ratings, and service range from platforms like Justdial, here are the <strong>top mobile repair shops in Bulandshahr</strong> (as of September 2025). These are selected for high ratings, verified services, and popularity:</p>
-          <div class="card-custom">
-            <img src="https://iphone-repair-bulandshahr.pages.dev/download%20(8).jpg" alt="Samsung Service Center">
-            <div class="ms-md-3">
-              <h5 class="fw-bold">Samsung Service Center (Bhoor)</h5>
-              <p>📍 Teacher Colony Road, Near Sarala Rani House, Gyan Lok, Bhoor, Bulandshahr - 203001</p>
-              <p class="small">✔ Rating: 4.6/5 (710+ reviews) • ✔ Samsung-specific repairs like screen and battery fixes • ✔ Genuine parts, quick service, warranty support</p>
-              <button class="btn btn-sm btn-show">📞 Show Number</button>
-              <button class="btn btn-sm btn-enquiry">Send Enquiry</button>
-            </div>
-          </div>
-          <div class="card-custom">
-            <img src="https://iphone-repair-bulandshahr.pages.dev/download%20(9).jpg" alt="Mi Service Center">
-            <div class="ms-md-3">
-              <h5 class="fw-bold">Mi Service Center (Devpuri)</h5>
-              <p>📍 350, Yash Lock Complex, D M Road, Near Raj Darwar Hotel, Devpuri, Bulandshahr - 203001</p>
-              <p class="small">✔ Rating: 3.9/5 (74+ reviews) • ✔ Xiaomi (Mi) repairs, software glitches, charging issues • ✔ Affordable, efficient diagnostics</p>
-              <button class="btn btn-sm btn-show">📞 Show Number</button>
-              <button class="btn btn-sm btn-enquiry">Send Enquiry</button>
-            </div>
-          </div>
-          <div class="card-custom">
-            <img src="https://iphone-repair-bulandshahr.pages.dev/download%20(10).jpg" alt="Realme Authorized Service Center">
-            <div class="ms-md-3">
-              <h5 class="fw-bold">Realme Authorized Service Center (Kiryawali)</h5>
-              <p>📍 Shop No. 108-109, Brahamputra Complex, Near Kala Aam, Kiryawali, Bulandshahr - 203001</p>
-              <p class="small">✔ Rating: 3.7/5 (184+ reviews) • ✔ Realme devices, camera, connectivity repairs • ✔ Budget-friendly, fast turnaround</p>
-              <button class="btn btn-sm btn-show">📞 Show Number</button>
-              <button class="btn btn-sm btn-enquiry">Send Enquiry</button>
-            </div>
-          </div>
-          <div class="card-custom">
-            <img src="https://iphone-repair-bulandshahr.pages.dev/download%20(11).jpg" alt="SAS Mobile Service Centre">
-            <div class="ms-md-3">
-              <h5 class="fw-bold">SAS Mobile Service Centre (Bulandshahr Ho)</h5>
-              <p>📍 Shop No. 7, Old Jail Road, Near Nagar Palika Office, Bulandshahr Ho - 203001</p>
-              <p class="small">✔ Rating: 3.5/5 • ✔ Multi-brand repairs (Android/iOS), water damage, data recovery • ✔ Comprehensive services, reasonable prices</p>
-              <button class="btn btn-sm btn-show">📞 Show Number</button>
-              <button class="btn btn-sm btn-enquiry">Send Enquiry</button>
-            </div>
-          </div>
-          <div class="card-custom">
-            <img src="https://iphone-repair-bulandshahr.pages.dev/download%20(12).jpg" alt="K K Mobile Parts">
-            <div class="ms-md-3">
-              <h5 class="fw-bold">K K Mobile Parts (Upper Kot)</h5>
-              <p>📍 Mohalla Khirki, Upper Kote, Bulandshahr - 203001</p>
-              <p class="small">✔ Rating: 4.0/5 • ✔ Parts replacement for iPhone, Samsung • ✔ Affordable, genuine spares, quick service</p>
-              <button class="btn btn-sm btn-show">📞 Show Number</button>
-              <button class="btn btn-sm btn-enquiry">Send Enquiry</button>
-            </div>
-          </div>
-          <p>For more options, check <a href="https://www.justdial.com/Bulandshahr/Mobile-Phone-Repair-Services">Justdial listings</a> for over 800+ <strong>mobile phone repair services in Bulandshahr</strong>, including brand-specific centers like Apple, Vivo, and OnePlus. Doorstep services like Cashify are also popular for convenience.</p>
-        </section>
-
-        <section>
-          <h2>Tips to Maintain Your Mobile Phone and Avoid Repairs in Bulandshahr</h2>
-          <p>Preventive care reduces the need for <strong>mobile repair in Bulandshahr</strong>. Follow these <strong>mobile maintenance tips</strong>:</p>
-          <ul>
-            <li>Use cases and screen protectors against drops.</li>
-            <li>Keep away from liquids to avoid water damage.</li>
-            <li>Avoid extreme temperatures harming the battery.</li>
-            <li>Handle cables gently to prevent port wear.</li>
-            <li>Update software regularly for security.</li>
-            <li>Unplug after full charge to preserve battery health.</li>
-            <li>Clean ports with soft cloths.</li>
-            <li>Stick to certified accessories.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>FAQs About Mobile Repair in Bulandshahr</h2>
-          <details>
-            <summary>How much does a screen replacement cost in Bulandshahr?</summary>
-            <p>Costs range from ₹1,500 for budget models to ₹20,000+ for flagship phones, depending on the model and part quality.</p>
-          </details>
-          <details>
-            <summary>Can water-damaged phones be repaired?</summary>
-            <p>Yes, but success depends on damage severity. Costs range from ₹1,000 to ₹5,000+.</p>
-          </details>
-          <details>
-            <summary>Do repair shops in Bulandshahr offer warranties?</summary>
-            <p>Reputable shops provide 3-6 month warranties on parts and services.</p>
-          </details>
-        </section>
-
-        <section>
-          <h2>Conclusion: Get Your Phone Repaired Today in Bulandshahr</h2>
-          <p>Finding the <strong>best mobile repair shops in Bulandshahr</strong> doesn't have to be overwhelming. With this guide, you're equipped to tackle common issues, understand costs, and select trusted services. Prioritize shops with strong reviews and warranties for hassle-free repairs. For the latest updates, search <strong>"mobile repair near me in Bulandshahr"</strong> on local directories. Keep your device in top shape and stay connected—contact a top shop today!</p>
-        </section>
       </div>
 
-      <!-- Right Sidebar Form -->
+      <!-- Sidebar -->
       <div class="col-12 col-md-4">
         <div class="sidebar">
           <h6>Enquiry Form</h6>
@@ -527,47 +122,33 @@
             <input type="text" name="phone" placeholder="Phone Number" required>
             <textarea name="message" rows="4" placeholder="Your Message"></textarea>
             <button type="submit">Submit</button>
-            <p id="errorMsg">Form submitted successfully! We'll get back to you soon.</p>
+            <p id="errorMsg">✅ Form submitted successfully! We'll get back to you soon.</p>
           </form>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Your Website Name. All rights reserved. 
+    <p>&copy; 2025 Your Website Name. All rights reserved.</p>
   </footer>
 
+  <!-- Script -->
   <script>
-    document.getElementById("cardForm").addEventListener("submit", function (event) {
-      event.preventDefault();
+    const scriptURL = "YOUR_GOOGLE_SCRIPT_URL"; // यहाँ Google Apps Script का URL डालना होगा
+    const form = document.getElementById("cardForm");
+    const msg = document.getElementById("errorMsg");
 
-      const formData = new FormData(event.target);
-      const formDetails = {
-        name: formData.get("name"),
-        email: formData.get("email"),
-        phone: formData.get("phone"),
-        message: formData.get("message"),
-      };
-
-      const scriptURL = "https://script.google.com/macros/s/AKfycbxxWc-gnkS1RosZF33aahxTFUWTINAoiyhin9pOzzVUZLJOugP4NAodKW7E8IHM5y03/exec";
-
-      fetch(scriptURL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formDetails),
-      })
-        .then(() => {
-          // Show success message
-          document.getElementById("errorMsg").style.display = "block";
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: "POST", body: new FormData(form)})
+        .then(response => {
+          msg.style.display = "block";
+          form.reset();
+          setTimeout(()=>{ msg.style.display="none"; },3000);
         })
-        .catch((error) => {
-          console.error("Error:", error);
-          alert("⚠️ Something went wrong! Try again.");
-        });
+        .catch(error => console.error("Error!", error.message));
     });
   </script>
 </body>
