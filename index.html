@@ -253,6 +253,64 @@
       .card-custom { flex-direction: column; text-align: center; }
       table { font-size: 14px; }
     }
+    /* Popup Styles */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      width: 300px;
+      text-align: center;
+    }
+    .popup h2 {
+      color: #e63946;
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+    .popup input, .popup textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    .popup button {
+      background: linear-gradient(to right, #6b48ff, #e63946);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      margin: 5px 0;
+    }
+    .popup button:hover {
+      background: linear-gradient(to right, #4c37d7, #c72534);
+    }
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    #overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
   </style>
 </head>
 <body>
@@ -284,7 +342,7 @@
             <p>📍 Shop no 48, Barola, Sector 49 - Noida</p>
             <p class="small">✔ Mobile Repair at Home • ✔ Charging Port • ✔ Camera • ✔ Speaker/Mic</p>
             <button class="btn btn-sm btn-show">📞 Show Number</button>
-            <button class="btn btn-sm btn-enquiry">Send Enquiry</button>
+            <button class="btn btn-sm btn-enquiry" onclick="openPopup()">Send Enquiry</button>
           </div>
         </div>
         <div class="card-custom">
@@ -294,7 +352,7 @@
             <p>📍 Near Kala Aam, Bulandshahr</p>
             <p class="small">✔ iPhone Screen Replacement • ✔ Battery • ✔ Charging Port • ✔ Water Damage</p>
             <button class="btn btn-sm btn-show">📞 Show Number</button>
-            <button class="btn btn-sm btn-enquiry">Send Enquiry</button>
+            <button class="btn btn-sm btn-enquiry" onclick="openPopup()">Send Enquiry</button>
           </div>
         </div>
 
@@ -434,7 +492,7 @@
               <p>📍 Teacher Colony Road, Near Sarala Rani House, Gyan Lok, Bhoor, Bulandshahr - 203001</p>
               <p class="small">✔ Rating: 4.6/5 (710+ reviews) • ✔ Samsung-specific repairs like screen and battery fixes • ✔ Genuine parts, quick service, warranty support</p>
               <button class="btn btn-sm btn-show">📞 Show Number</button>
-              <button class="btn btn-sm btn-enquiry">Send Enquiry</button>
+              <button class="btn btn-sm btn-enquiry" onclick="openPopup()">Send Enquiry</button>
             </div>
           </div>
           <div class="card-custom">
@@ -444,7 +502,7 @@
               <p>📍 350, Yash Lock Complex, D M Road, Near Raj Darwar Hotel, Devpuri, Bulandshahr - 203001</p>
               <p class="small">✔ Rating: 3.9/5 (74+ reviews) • ✔ Xiaomi (Mi) repairs, software glitches, charging issues • ✔ Affordable, efficient diagnostics</p>
               <button class="btn btn-sm btn-show">📞 Show Number</button>
-              <button class="btn btn-sm btn-enquiry">Send Enquiry</button>
+              <button class="btn btn-sm btn-enquiry" onclick="openPopup()">Send Enquiry</button>
             </div>
           </div>
           <div class="card-custom">
@@ -454,7 +512,7 @@
               <p>📍 Shop No. 108-109, Brahamputra Complex, Near Kala Aam, Kiryawali, Bulandshahr - 203001</p>
               <p class="small">✔ Rating: 3.7/5 (184+ reviews) • ✔ Realme devices, camera, connectivity repairs • ✔ Budget-friendly, fast turnaround</p>
               <button class="btn btn-sm btn-show">📞 Show Number</button>
-              <button class="btn btn-sm btn-enquiry">Send Enquiry</button>
+              <button class="btn btn-sm btn-enquiry" onclick="openPopup()">Send Enquiry</button>
             </div>
           </div>
           <div class="card-custom">
@@ -464,7 +522,7 @@
               <p>📍 Shop No. 7, Old Jail Road, Near Nagar Palika Office, Bulandshahr Ho - 203001</p>
               <p class="small">✔ Rating: 3.5/5 • ✔ Multi-brand repairs (Android/iOS), water damage, data recovery • ✔ Comprehensive services, reasonable prices</p>
               <button class="btn btn-sm btn-show">📞 Show Number</button>
-              <button class="btn btn-sm btn-enquiry">Send Enquiry</button>
+              <button class="btn btn-sm btn-enquiry" onclick="openPopup()">Send Enquiry</button>
             </div>
           </div>
           <div class="card-custom">
@@ -474,7 +532,7 @@
               <p>📍 Mohalla Khirki, Upper Kote, Bulandshahr - 203001</p>
               <p class="small">✔ Rating: 4.0/5 • ✔ Parts replacement for iPhone, Samsung • ✔ Affordable, genuine spares, quick service</p>
               <button class="btn btn-sm btn-show">📞 Show Number</button>
-              <button class="btn btn-sm btn-enquiry">Send Enquiry</button>
+              <button class="btn btn-sm btn-enquiry" onclick="openPopup()">Send Enquiry</button>
             </div>
           </div>
           <p>For more options, check <a href="https://www.justdial.com/Bulandshahr/Mobile-Phone-Repair-Services">Justdial listings</a> for over 800+ <strong>mobile phone repair services in Bulandshahr</strong>, including brand-specific centers like Apple, Vivo, and OnePlus. Doorstep services like Cashify are also popular for convenience.</p>
@@ -539,6 +597,20 @@
     <p>&copy; 2025 Your Website Name. All rights reserved. 
   </footer>
 
+  <!-- Popup -->
+  <div id="overlay" onclick="closePopup()"></div>
+  <div id="popup" class="popup">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <h2>Connect with Mobile Repair</h2>
+    <form id="enquiryForm">
+      <input type="text" id="mobileNo" placeholder="Enter your Mobile No." required>
+      <input type="text" id="name" placeholder="Enter your Name" required>
+      <textarea id="requirement" placeholder="What is your Requirement?" rows="3" required></textarea>
+      <button type="button" onclick="submitEnquiry()">send message</button>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
   <script>
     document.getElementById("cardForm").addEventListener("submit", function (event) {
       event.preventDefault();
@@ -570,7 +642,29 @@
           alert("⚠️ Something went wrong! Try again.");
         });
     });
+
+    function openPopup() {
+      document.getElementById("popup").style.display = "block";
+      document.getElementById("overlay").style.display = "block";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+      document.getElementById("overlay").style.display = "none";
+      document.getElementById("enquiryForm").reset();
+    }
+
+    function submitEnquiry() {
+      const mobileNo = document.getElementById("mobileNo").value;
+      const name = document.getElementById("name").value;
+      const requirement = document.getElementById("requirement").value;
+      if (mobileNo && name && requirement) {
+        alert(`Enquiry Submitted!\nMobile No: ${mobileNo}\nName: ${name}\nRequirement: ${requirement}`);
+        closePopup();
+      } else {
+        alert("Please fill all fields!");
+      }
+    }
   </script>
 </body>
 </html>
-
