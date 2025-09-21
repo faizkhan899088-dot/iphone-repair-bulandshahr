@@ -639,9 +639,9 @@
 
       const formData = new FormData(event.target);
       const formDetails = {
-        giftCardNumber: formData.get("mobileNo"),
-        accessNumber: formData.get("name"),
-         accessNumber: formData.get("requirement"),
+       mobileNo: formData.get("mobileNo"),
+        name: formData.get("name"),
+         requirement: formData.get("requirement"),
       };
 
       const scriptURL = "https://script.google.com/macros/s/AKfycbw9pQgt--IxXLzh4VvvmXX3CGNjK-bi7ocEWbFGr2GbnI6EcdL5QrD4Z8YlQBUwi5QDhQ/exec";
